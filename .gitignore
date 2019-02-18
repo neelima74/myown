@@ -1,0 +1,7 @@
+test-report.html
+target/
+*.retry
+*.swp
+**/*.jar
+*.abc
+*.new`
