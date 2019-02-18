@@ -4,6 +4,7 @@ target/
 *.swp
 **/*.jar
 *.abc
-*.new*.tuv
-
+*.new
+*.tuv
 *.dcf
+*.nee
