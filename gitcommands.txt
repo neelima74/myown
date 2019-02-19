@@ -1,0 +1,91 @@
+git init - Initialize the repo 
+ls - la --> to show the associated files inside
+
+master -->  
+
+git status --> to get the state of your working directory
+
+Working directory is folder -->local-repository
+
+to close the vi editor by saving --? Press ESC and then :wq
+
+Untracked -- There is no information about it 
+
+git rm --cached .gitignore(gitignore is sample file name)
+
+git commit -m "" (-m stands for message)--> space with file name also can be done
+
+git commit -am "" (from working directory to local repo)(This cannot be done for Untracked files, 
+this is applicable for files are in staging atleast once/ modified files and not for newly added files and not in staging yet)
+
+git --help (to get the commands)
+
+git log -- To help us in who, when, why -- what is missing here 
+
+git log -p ( This will help us in who, when, why, what) and same info will be given using the command  (git show) 
+
+git reset ( commit id #)
+
+git checkout -- (filename) -- to discard the changes in local
+
+git branch --> which helps in finding the branches 
+
+git branch (branchname) -- to create a new branches
+
+git checkout (branchname) -- to switch from one branch to another
+
+git branch -d (branchname) -- To delete a branch -- Make sure you are not in the same branch when you wanted to delete the same branch
+-- You will get an error as The branch 'localbranch' is not fully merged.-- Merge it compltely to the master and then delete the branch, If not directly run the below command and delete it
+git branch -D (branchname)
+
+git tag VER-1.0 (Tagname) - (To create a tag for the last checkin that we have completed-Incase if we delete a branch and then do take the changes when issue occurs in prod) --Once we create a tag we can delete a branch
+
+--Now we have to create a new branch and switch to the new branch created with tag name -- Use the below command
+
+--Switching to tagname 
+git checkout VER-1.0(tagname)
+
+--Creating branch with the tag name-- To do the further chnages and commit them
+git checkout -b VER-1.0( tagname)
+
+--2/19/19
+
+--Rebase
+git rebase master
+
+--Revert
+git revert commitid(#hash)
+
+--Cherrypicking
+git cherry-pick commitid (#hash)
+
+--Amend commit messages
+git rebase -i HEAD~2 (Number 2 depends on how many messages needs to be modified) -- Here we need to change the text from pick to edit for the messaged which needs to be modified
+git commit --amend
+git rebase --continue (Here if you are doing for the first time it will prompt where it actually stopped)
+git commit --amend (To Edit message)
+git rebase --continue (This needs to be repeated until the successful message is displayed)
+
+
+-- Remote Repository
+
+git remote add origin https://github.com/neelima74/myown.git -- This is to add remote repo
+git push origin master -- This is to push changes from master to repo
+git clone https://github.com/neelima74/myown.git(repo name) -- This is to clone from repo to local
+git branch -r ( to see all the branches in my remote repo)
+git push origin master ( to push the changes to the repo from local) -- So destination is origin and source is master branch
+git pull origin master( to get the changes from repo to the local) 
+git pull ( to take the changes from all the branches present in remote repo)
+
+
+
+
+
+
+
+
+
+
+
+
+
