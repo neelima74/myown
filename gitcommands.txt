@@ -77,6 +77,30 @@ git push origin master ( to push the changes to the repo from local) -- So desti
 git pull origin master( to get the changes from repo to the local) 
 git pull ( to take the changes from all the branches present in remote repo)
 
+--2/20/2019
+
+--This Stash is helpful when we need to stop the changes in between and work on the another branch for another changes
+
+git stash -- to keep the changes in buffer/index -- so that we can revert it back when required  -- Ensure that you see this messgae once you are done with stashing--"Saved working directory and index state WIP on master: 9d2d26a Merge pull request"
+git stash pop -- To revert the changes back to file in local
+
+--
+if we want to add individual files 
+git add file1 file2 file3
+
+After adding if we need to do commit individual files instead of all
+git commit -m "" file1 file2 file3
+
+--to generate a SSH Key
+ssh-keygen.exe -- Once key is generated Go to GITBUB setting and do the changes in SSH Key tab and add the same key
+Note: SSH Key is system specific
+
+--to set the url from https to SSH use the below command
+git remote set-url origin git@github.com:neelima74/myown.git
+
+--to check the version of remote 
+git remote -v
+
 
 
 
